@@ -1,5 +1,5 @@
 {% set name = "textual" %}
-{% set version = "0.1.11" %}
+{% set version = "0.1.12" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 51cb6d6cfd1554a3c18f069fc3d63f98329bac39712de6193099a75f2b3ed03c
+  sha256: fa70b9f2fe43819afeea64dff355aee1610e1d55e9915df1cef5b0d6f86cb20d
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [win or py<37]
 
 requirements:
@@ -35,7 +35,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'Textual is a TUI (Text User Interface) framework for Python inspired by modern web development.'
+  summary: Textual is a TUI (Text User Interface) framework for Python inspired by modern web development.
   dev_url: https://github.com/willmcgugan/textual
 
 extra:
