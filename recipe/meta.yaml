@@ -11,24 +11,26 @@ source:
 
 build:
   number: 1
+  noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  skip: true  # [win or py<37]
 
 requirements:
   host:
-    - python
+    - python >=3.6,<4
     - poetry-core >=1.0.0
     - pip
   run:
-    - python
+    - python >=3.6,<4
     - rich >=10.7.0,<11
-    - typing-extensions >=3.10.0,<4  # [py<38]
+    - typing-extensions >=3.10.0,<4
 
 test:
-  requires:
-    - pip
+  imports:
+    - textual
+    - textual.layouts
   commands:
     - pip check
+  requires:
 
 about:
   home: https://github.com/willmcgugan/textual
