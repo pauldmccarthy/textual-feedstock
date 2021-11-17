@@ -10,25 +10,28 @@ source:
   sha256: fa70b9f2fe43819afeea64dff355aee1610e1d55e9915df1cef5b0d6f86cb20d
 
 build:
-  number: 0
+  number: 1
+  noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  skip: true  # [win or py<37]
 
 requirements:
   host:
-    - python
+    - python >=3.6,<4
     - poetry-core >=1.0.0
     - pip
   run:
-    - python
+    - python >=3.6,<4
     - rich >=10.7.0,<11
-    - typing-extensions >=3.10.0,<4  # [py<38]
+    - typing-extensions >=3.10.0,<4
 
 test:
-  requires:
-    - pip
+  imports:
+    - textual
+    - textual.layouts
   commands:
     - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/willmcgugan/textual
