@@ -1,5 +1,5 @@
 {% set name = "textual" %}
-{% set version = "0.1.12" %}
+{% set version = "0.1.13" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: fa70b9f2fe43819afeea64dff355aee1610e1d55e9915df1cef5b0d6f86cb20d
+  sha256: 5acb7d4d7e50dfb14d9c29a65ad1a158612f25c220187f2ba01c93398ddf5060
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
