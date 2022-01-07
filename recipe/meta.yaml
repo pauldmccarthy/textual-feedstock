@@ -34,12 +34,12 @@ test:
     - pip
 
 about:
-  home: https://github.com/willmcgugan/textual
+  home: https://github.com/Textualize/textual
   license: MIT
   license_family: MIT
   license_file: LICENSE
   summary: Textual is a TUI (Text User Interface) framework for Python inspired by modern web development.
-  dev_url: https://github.com/willmcgugan/textual
+  dev_url: https://github.com/Textualize/textual
 
 extra:
   recipe-maintainers:
