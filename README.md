@@ -1,7 +1,7 @@
 About textual
 =============
 
-Home: https://github.com/willmcgugan/textual
+Home: https://github.com/Textualize/textual
 
 Package license: MIT
 
@@ -9,7 +9,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/textual-feedsto
 
 Summary: Textual is a TUI (Text User Interface) framework for Python inspired by modern web development.
 
-Development: https://github.com/willmcgugan/textual
+Development: https://github.com/Textualize/textual
 
 Current build status
 ====================
