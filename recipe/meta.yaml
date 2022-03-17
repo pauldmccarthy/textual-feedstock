@@ -10,7 +10,7 @@ source:
   sha256: af6aa1fa34fe6d40689ce55a7bf519a07e48523a75b95cbed572990e0d6b6f84
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -21,13 +21,17 @@ requirements:
     - pip
   run:
     - python >=3.7,<4
-    - rich >=11,<12
+    - rich >=12,<13
     - typing-extensions >=3.10.0,<4
 
 test:
   imports:
     - textual
     - textual.layouts
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/Textualize/textual
