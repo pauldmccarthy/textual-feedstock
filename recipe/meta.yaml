@@ -28,6 +28,10 @@ test:
   imports:
     - textual
     - textual.layouts
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/Textualize/textual
