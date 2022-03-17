@@ -5,7 +5,7 @@ Home: https://github.com/Textualize/textual
 
 Package license: MIT
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/textual-feedstock/blob/master/LICENSE.txt)
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/textual-feedstock/blob/main/LICENSE.txt)
 
 Summary: Textual is a TUI (Text User Interface) framework for Python inspired by modern web development.
 
@@ -17,8 +17,8 @@ Current build status
 
 <table><tr><td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13997&branchName=master">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/textual-feedstock?branchName=master">
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13997&branchName=main">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/textual-feedstock?branchName=main">
       </a>
     </td>
   </tr>
