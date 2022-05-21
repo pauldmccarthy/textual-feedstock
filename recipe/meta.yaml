@@ -10,7 +10,7 @@ source:
   sha256: b2883f8ed291de58b9aa73de6d24bbaae0174687487458a4eb2a7c188a2acf23
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -21,8 +21,8 @@ requirements:
     - pip
   run:
     - python >=3.7,<4
-    - rich >=12,<13
-    - typing-extensions >=3.10.0,<4
+    - rich >=12.3,<13
+    - typing-extensions >=4,<5
 
 test:
   imports:
