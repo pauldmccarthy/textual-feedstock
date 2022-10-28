@@ -23,6 +23,7 @@ requirements:
     - python >=3.7,<4
     - rich >=12.6,<13
     - typing-extensions >=4,<5
+    - nanoid >=2.0,<3
 
 test:
   imports:
