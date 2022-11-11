@@ -24,6 +24,7 @@ requirements:
     - rich >=12.6,<13
     - typing-extensions >=4,<5
     - nanoid >=2.0,<3
+    - importlib-metadata >=4.11.3,<5
 
 test:
   imports:
