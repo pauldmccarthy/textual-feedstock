@@ -17,7 +17,7 @@ build:
 outputs:
   - name: {{ name }}
     build:
-      script: {{ PYTHON }} -m pip install . -vv
+      script: python -m pip install . --no-deps --no-build-isolation -vv
       noarch: python
 
     requirements:
