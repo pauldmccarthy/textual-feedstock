@@ -51,6 +51,8 @@ outputs:
         - poetry-core >=1.0.0
         - pip
       run:
+        - python >=3.7,<4
+        - {{ pin_subpackage('textual', exact=True) }}
         - aiohttp
         - click
         - msgpack-python
