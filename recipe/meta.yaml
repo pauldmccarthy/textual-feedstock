@@ -12,28 +12,52 @@ source:
 build:
   number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
 
-requirements:
-  host:
-    - python >=3.7,<4
-    - poetry-core >=1.0.0
-    - pip
-  run:
-    - python >=3.7,<4
-    - rich >=12.6,<13
-    - typing-extensions >=4,<5
-    - nanoid >=2.0,<3
-    - importlib-metadata >=4.11.3,<5
 
-test:
-  imports:
-    - textual
-    - textual.layouts
-  commands:
-    - pip check
-  requires:
-    - pip
+outputs:
+  - name: {{ name }}
+    build:
+      script: {{ PYTHON }} -m pip install . -vv
+      noarch: python
+
+    requirements:
+      host:
+        - python >=3.7,<4
+        - poetry-core >=1.0.0
+        - pip
+      run:
+        - python >=3.7,<4
+        - rich >=12.6,<13
+        - typing-extensions >=4,<5
+        - nanoid >=2.0,<3
+        - importlib-metadata >=4.11.3,<5
+    test:
+      imports:
+        - textual
+        - textual.layouts
+      commands:
+        - pip check
+      requires:
+        - pip
+
+  - name: {{ name }}-devtools
+    build:
+      script: echo Nothing to do.
+      noarch: python
+      entry_points:
+        - textual = textual.cli.cli:run
+    requirements:
+      host:
+        - python >=3.7,<4
+        - poetry-core >=1.0.0
+        - pip
+      run:
+        - aiohttp
+        - click
+        - msgpack-python
+    test:
+      commands:
+        - textual --help 
 
 about:
   home: https://github.com/Textualize/textual
@@ -42,6 +66,7 @@ about:
   license_file: LICENSE
   summary: Textual is a TUI (Text User Interface) framework for Python inspired by modern web development.
   dev_url: https://github.com/Textualize/textual
+  doc_url: https://textual.textualize.io/
 
 extra:
   recipe-maintainers:
