@@ -1,5 +1,5 @@
 {% set name = "textual" %}
-{% set version = "0.5.0" %}
+{% set version = "0.8.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 516bf4db05830e70f9806828610a1a00de08068d984d329dbecc8dbef5d71ab7
+  sha256: 84b1bcc018938a80b94c9187e2c94f0d051402fd8daa553a1c5888d547531588
 
 build:
-  number: 1
+  number: 0
   noarch: python
 
 
@@ -58,7 +58,7 @@ outputs:
         - msgpack-python
     test:
       commands:
-        - textual --help 
+        - textual --help
 
 about:
   home: https://github.com/Textualize/textual
