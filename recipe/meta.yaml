@@ -10,7 +10,7 @@ source:
   sha256: f826b422e39e4ca188307336f6a4f4b0a89834dab2628430b613084c70799dfd
 
 build:
-  number: 0
+  number: 1
   noarch: python
 
 
@@ -26,9 +26,9 @@ outputs:
         - pip
       run:
         - python >=3.7,<4
-        - rich >=12.6,<13
+        - rich >=12.6
+        - markdown-it-py >=2.1.0,<3
         - typing-extensions >=4,<5
-        - nanoid >=2.0,<3
         - importlib-metadata >=4.11.3,<5
     test:
       imports:
