@@ -29,7 +29,7 @@ outputs:
         - rich >12.6
         - markdown-it-py >=2.1.0,<3
         - typing-extensions >=4,<5
-        - importlib-metadata >=4.11.3,<5
+        - importlib-metadata >=4.11.3,<4.12
     test:
       imports:
         - textual
@@ -53,9 +53,10 @@ outputs:
       run:
         - python >=3.7,<4
         - {{ pin_subpackage('textual', exact=True) }}
-        - aiohttp
-        - click
-        - msgpack-python
+        - aiohttp >=3.8.1
+        - click >=8.1.2
+        - msgpack-python >=1.0.3
+        - mkdocs-exclude >=1.0.2,<1.1
     test:
       commands:
         - textual --help
